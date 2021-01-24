@@ -1,4 +1,4 @@
-package com.exmaple.demo.dto;
+package com.exmaple.demo.dao;
 
 import java.time.ZonedDateTime;
 import java.util.Objects;

@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.example.demo.helper.TestData;
-import com.exmaple.demo.dto.Customer;
+import com.exmaple.demo.dao.Customer;
 
 @SpringBootTest
 class SortServiceTest {

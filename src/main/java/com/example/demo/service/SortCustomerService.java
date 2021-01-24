@@ -6,7 +6,7 @@ import java.util.Objects;
 
 import org.springframework.stereotype.Service;
 
-import com.exmaple.demo.dto.Customer;
+import com.exmaple.demo.dao.Customer;
 
 /**
  * Service implementing the sorting of customers list interface.

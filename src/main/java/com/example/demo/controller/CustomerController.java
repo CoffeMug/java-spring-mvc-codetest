@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.service.SortService;
-import com.exmaple.demo.dto.Customer;
+import com.exmaple.demo.dao.Customer;
 
 @RestController
 public class CustomerController {
