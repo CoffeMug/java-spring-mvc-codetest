@@ -11,17 +11,17 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 @SpringBootApplication
 @EnableAsync
 public class JavaSpringMvcApplication implements AsyncConfigurer {
-	
+
 	/**
 	 * Sample async executor with 100 threads pool size
 	 */
-    @Override
-    public Executor getAsyncExecutor() {
-        ThreadPoolTaskScheduler scheduler = new ThreadPoolTaskScheduler();
-        scheduler.setPoolSize(100);
-        scheduler.initialize();
-        return scheduler;
-    }
+	@Override
+	public Executor getAsyncExecutor() {
+		ThreadPoolTaskScheduler scheduler = new ThreadPoolTaskScheduler();
+		scheduler.setPoolSize(100);
+		scheduler.initialize();
+		return scheduler;
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(JavaSpringMvcApplication.class, args);

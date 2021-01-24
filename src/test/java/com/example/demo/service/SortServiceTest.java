@@ -13,8 +13,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.example.demo.helper.TestData;
 import com.exmaple.demo.dto.Customer;
 
-
-
 @SpringBootTest
 class SortServiceTest {
 
@@ -27,17 +25,17 @@ class SortServiceTest {
 			sortService.sort(null);
 		});
 	}
-	
+
 	@Test
 	public void sortEmptyList() {
-		
+
 		// Given
 		List<Customer> unSortedCustomers = TestData.getEmptyCustomerList();
-		
+
 		// When
 		List<Customer> sortedCustomers = sortService.sort(unSortedCustomers);
-		
-		// Then 
+
+		// Then
 		assertEquals(0, sortedCustomers.size());
 	}
 
@@ -46,7 +44,7 @@ class SortServiceTest {
 
 		// Given
 		List<Customer> unSortedCustomers = TestData.getOneCustomerList();
-		
+
 		// When
 		List<Customer> sortedCustomers = sortService.sort(unSortedCustomers);
 
@@ -66,7 +64,7 @@ class SortServiceTest {
 
 		// Given
 		List<Customer> unSortedCustomers = TestData.getTwoCustomerList();
-		
+
 		// When
 		List<Customer> sortedCustomers = sortService.sort(unSortedCustomers);
 
@@ -85,6 +83,5 @@ class SortServiceTest {
 		assertEquals(ZonedDateTime.parse("2014-06-18T06:26:56-07:00"), sortedCustomers.get(1).getDueTime());
 		assertEquals(ZonedDateTime.parse("2015-04-08T12:47:16-07:00"), sortedCustomers.get(1).getJoinTime());
 	}
-	
 
 }

@@ -10,6 +10,7 @@ import com.exmaple.demo.dto.Customer;
 
 /**
  * Service implementing the sorting of customers list interface.
+ * 
  * @author amin
  *
  */
@@ -17,18 +18,18 @@ import com.exmaple.demo.dto.Customer;
 public class SortCustomerService implements SortService<Customer> {
 
 	/**
-	 * Sorts the customer's list based on the comparator defined in the 
+	 * Sorts the customer's list based on the comparator defined in the
 	 * {@link#Customer} data object.
 	 */
 	@Override
 	public List<Customer> sort(List<Customer> customers) {
-		
-		if(Objects.isNull(customers)) {
+
+		if (Objects.isNull(customers)) {
 			throw new IllegalArgumentException("List of customers is null");
 		}
-		
+
 		Collections.sort(customers);
-		
+
 		return customers;
 	}
 

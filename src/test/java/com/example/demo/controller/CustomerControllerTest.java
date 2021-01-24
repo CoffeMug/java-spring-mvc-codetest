@@ -115,8 +115,7 @@ class CustomerControllerTest {
 		assertEquals(oneCustomerList.get(0).getId(), result.getBody().get(0).getId());
 
 	}
-	
-	
+
 	@Test
 	void sendSortRequestWithGoodHeaderAndSomeData() throws URISyntaxException {
 
@@ -142,17 +141,17 @@ class CustomerControllerTest {
 
 		// Assert response body
 		assertEquals(2, result.getBody().size());
-		
+
 		assertEquals(2, result.getBody().get(0).getId());
 		assertEquals("David Khorsandi", result.getBody().get(0).getFullName());
 		assertTrue(ZonedDateTime.parse("2014-05-06T07:35:43-07:00").isEqual(result.getBody().get(0).getDueTime()));
 		assertTrue(ZonedDateTime.parse("2015-05-01T06:03:44-07:00").isEqual(result.getBody().get(0).getJoinTime()));
-		
+
 		assertEquals(1, result.getBody().get(1).getId());
 		assertEquals("Amin Khorsandi", result.getBody().get(1).getFullName());
 		assertTrue(ZonedDateTime.parse("2014-06-18T06:26:56-07:00").isEqual(result.getBody().get(1).getDueTime()));
 		assertTrue(ZonedDateTime.parse("2015-04-08T12:47:16-07:00").isEqual(result.getBody().get(1).getJoinTime()));
-		
+
 		assertTrue(result.getBody().get(1).getDueTime().isAfter(result.getBody().get(0).getDueTime()));
 	}
 
