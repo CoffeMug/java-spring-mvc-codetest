@@ -2,3 +2,7 @@ mvn*
 target
 *.iml
 *.ipr
+
+.classpath
+.project
+.settings
